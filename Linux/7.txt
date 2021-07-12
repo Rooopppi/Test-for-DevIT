@@ -1,0 +1,16 @@
+7.
+# Создайте новый файл 503.html в папке html с следующим содержимым:
+<html>
+    <head>
+        <title>503</title>
+    </head>
+</html>
+
+cd www/html #переходим в папку html
+cat > 503.html # создаем файл 503.html с помощью утилиты cat
+<html>
+    <head>
+        <title>503</title> # вставляем содержимое 
+    </head>
+</html>
+ctrl + D # нажимаем для сохранения
