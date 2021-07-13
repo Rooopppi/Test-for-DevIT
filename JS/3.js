@@ -8,19 +8,15 @@ function primitiveMultiply(a, b) {
     throw new MultiplicatorUnitFailure();
 }
 
+
 function reliableMultiply(a, b) {
-    try {
-        while (true) {
+        try {
             const res = primitiveMultiply(a, b);
-        
-            if (typeof res == 'number') {
-                console.log(res);
-                break;
-            }  
+            return res
+        } catch {
+            primitiveMultiply(a, b);
         }
-    }
-    catch {
-        
-    }
 }
+
+
 console.log(reliableMultiply(8, 8));

@@ -4,7 +4,6 @@
 # Задание
 Внести изменения в ветке dev репозитория git@example.com:example/test.git, добавив в корень файл Readme.md с текстом ### May be in future и залить их на удаленный репозиторий. Напишите набор команд для решения этой задачи с коментариями.
 
-git remote add origin git@example.com:example/test.git # подключаемся к главному удаленному репрозиторию 
 git clone git@example.com:example/test.git # клонируем репрозиторий себе на компьютер
 cd test.git # переходим в папку проекта 
 git branch # смотрим список веток и определяем текущую
