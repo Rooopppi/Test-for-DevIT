@@ -26,31 +26,31 @@ let testData4 = [{"name":"Vasya","email":"vasya@example.com","age":20},
 [[[[1,2,1990,85,24,"Vasya","colya@example.com","Rafshan","ashan@example.com",true,false,
 [{"name":"Rafshan","email":"rafshan@example.com","age":11}]]]]]]
 
-function array_normalize(arr, shema, transform) {
-    let normalized = [];
-    if (!transform) {
-        arr.forEach(function(el, i) {
-            if (typeof el == typeof shema && typeof shema == "string") {
-                normalized.push(el)
-            } 
-        })
-    } else if (typeof el == typeof shema) {
-        arr.forEach(function(el, i) { 
-                normalized.push(String(el))
-            });
-        } else if (typeof el == typeof shema && typeof shema == Object) {
-            console.log(Array.from(2, 4, 5));
-            Array.from(el).forEach(function(el, i) {
-                if (el == shema) {
-                    console.log(el);
-                    normalized.push(el)
-                }
-            })
-        }
-    console.log(normalized);
+// function array_normalize(arr, shema, transform) {
+//     let normalized = [];
+//     if (!transform) {
+//         arr.forEach(function(el, i) {
+//             if (typeof el == typeof shema && typeof shema == "string") {
+//                 normalized.push(el)
+//             } 
+//         })
+//     } else if (typeof el == typeof shema) {
+//         arr.forEach(function(el, i) { 
+//                 normalized.push(String(el))
+//             });
+//         } else if (typeof el == typeof shema && typeof shema == Object) {
+//             console.log(Array.from(2, 4, 5));
+//             Array.from(el).forEach(function(el, i) {
+//                 if (el == shema) {
+//                     console.log(el);
+//                     normalized.push(el)
+//                 }
+//             })
+//         }
+//     console.log(normalized);
     
-}
-array_normalize(testData4, {age: 'float'})
+// }
+// array_normalize(testData4, {age: 'float'})
 
 // function array_normalize(arr, shema, transform) {
 //     let normalized = [];

@@ -1,0 +1,17 @@
+posts 
+{
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "title": { "bsonType": "string" },
+    "content": { "bsonType": "string" },
+    "author": { "bsonType": "string" },
+    "like": { "bsonType": "int" },
+    "dislike": { "bsonType": "int" }
+  }
+}
+
+
+
+Добавьте новую запись в коллекцию posts
+
+> db.users.insertOne({'properties': {'name': "Tom"}})

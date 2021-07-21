@@ -10,24 +10,16 @@ array = [2, 1990, 85, 24, "Vasya", "colya@example.com", "Rafshan", "ashan@exampl
 
 function array_skip_until(arr, value) {
     let reduced = [];
-    arr.forEach(function(el, i) {
-        if (el !== value) {
-            reduced.push(el)
-        } 
-    });
-    console.log(reduced); 
+    for (i=arr.length-1; i>=0; i--) {
+        if (arr[i] !== value) {
+            reduced.unshift(arr[i])
+        } else {
+            reduced.unshift(arr[i]);
+            console.log(reduced); 
+        }
+    }
 }
 
-// function array_skip_until(arr, value) {
-//     const reduced = arr.reduce(function(acc, item) {
-//         if (value !== item) {
-//             acc.push(item)
-//         } else {
-//             return
-//         }
-//     }, []);
-//     console.log(reduced);
-// }
 
-array_skip_until(array, 85)
+array_skip_until(array, "Rafshan")
 

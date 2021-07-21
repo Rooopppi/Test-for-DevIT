@@ -1,0 +1,15 @@
+posts 
+{
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "title": { "bsonType": "string" },
+    "content": { "bsonType": "string" },
+    "author": { "bsonType": "string" },
+    "like": { "bsonType": "int" },
+    "dislike": { "bsonType": "int" }
+  }
+}
+
+Выведите список авторов и их общее количество like
+
+db.posts.find({"properties": {"author": {'bsonType': "string"}}, {'like': {$sum: "bsonType"}}})

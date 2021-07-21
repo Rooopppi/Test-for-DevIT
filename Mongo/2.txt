@@ -1,0 +1,15 @@
+posts 
+{
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "title": { "bsonType": "string" },
+    "content": { "bsonType": "string" },
+    "author": { "bsonType": "string" },
+    "like": { "bsonType": "int" },
+    "dislike": { "bsonType": "int" }
+  }
+}
+
+Выведите все записи у которых like больше 100
+
+db.posts.find({"properties": {"like": {"bsonType": {$gt: 100}}}})
