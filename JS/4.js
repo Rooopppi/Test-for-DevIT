@@ -2,10 +2,11 @@
 var arr = [1, 2, 3];
 
 Object.defineProperty(Array.prototype, 'append', {
-    value: function(a) {  
-        const appended = [a].concat(this);
-        console.log(appended); 
+    value: function(a) { 
+        const old = [...this];
+        this.splice(0,this.length);
+        this.push(...[a].concat(old)); 
     }
 });
-
-arr.append(0);
+arr.append(0, 2, 5)
+console.log(arr);

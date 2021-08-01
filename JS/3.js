@@ -2,7 +2,7 @@
 
 function MultiplicatorUnitFailure() {}
 function primitiveMultiply(a, b) {
-  if (Math.random() < 0.5)
+  if (Math.random() < 0.1)
     return a * b;
   else
     throw new MultiplicatorUnitFailure();
@@ -14,7 +14,7 @@ function reliableMultiply(a, b) {
             const res = primitiveMultiply(a, b);
             return res
         } catch {
-            primitiveMultiply(a, b);
+            return reliableMultiply(a, b);
         }
 }
 

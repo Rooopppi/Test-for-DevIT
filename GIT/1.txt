@@ -3,7 +3,13 @@
 
 # Задание
 Внести изменения в ветке dev репозитория git@example.com:example/test.git, добавив в корень файл Readme.md с текстом ### May be in future и залить их на удаленный репозиторий. Напишите набор команд для решения этой задачи с коментариями.
-
+ssh-keygen -t ed25519 -C "your_email@example.com" # создаем ключ, указываю почту на которую зарегистрирован гитхаб
+> Enter passphrase (empty for no passphrase): [Type a passphrase] # вводим/не вводим  пароль
+> Enter same passphrase again: [Type passphrase again] 
+eval `ssh-agent -s` # запускаем ssh агент
+ssh-add ~/.ssh/id_rsa # добавим свой закрытый ключ в ssh агент
+cat ~/.ssh/id_rsa.pub # копируем содержимое файла с ключем 
+Переходим на гитхаб и добавляем свой ключ
 git clone git@example.com:example/test.git # клонируем репрозиторий себе на компьютер
 cd test.git # переходим в папку проекта 
 git branch # смотрим список веток и определяем текущую
